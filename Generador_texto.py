@@ -1,5 +1,4 @@
 import string
-import LZW
 import random
 def generador_cadena(n): #tamañodecadena
     str_cadena=""

@@ -23,7 +23,7 @@ Tabla = []
 Tabla.append(['Archivo',"Original(bits)","Comprimido(bits)","Tiempo(seg)","I original","I encode","H original","H encode"])
 for i in range(1,31):
     #TEXTO GENERADO
-    texto_generado=Generador_texto.generador_patrones(20,500)
+    texto_generado=Generador_texto.generador_cadena(10000)
     #Archivo de texto original
     output_file = open("Texto_generado"+str(i)+".txt", "w")
     output_file.write(texto_generado)
@@ -63,6 +63,7 @@ for i in range(1,31):
     datos=Formulas_shannon.Datos_shannon(size3,cdad_simbolos) #información,entropia
     #para comprobar descompresión
     #print("decode ",i,"|tamaño:",size3,"bits","|información:",datos[0],"|tiempo:",elapsed_time,"seg","|entropia:",datos[1])
+
 
 print(tabulate(Tabla, headers='firstrow', tablefmt='fancy_grid'))
 
